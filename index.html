@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniture Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Furniture Store</h1>
+      <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#contact">Contact</a>
+          <button onclick="openModal('loginModal')" >Login</button>
+          <button onclick="openModal('signupModal')">Sign Up</button>
+      </nav>
+  </header
+   
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal('loginModal')">&times;</span>
+          <h2>Login</h2>
+          <form onsubmit="return validateLogin()">
+              <label for="loginUsername">Username</label>
+              <input type="text" id="loginUsername" required>
+              <label for="loginPassword">Password</label>
+              <input type="password" id="loginPassword" required>
+              <button type="submit">Login</button>
+              <p id="loginErrorMessage" class="error-message"></p>
+              <p>Don't have an account? <a href="#" id="signupLink">Sign up</a></p>
+          </form>
+      </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signupModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal('signupModal')">&times;</span>
+          <h2>Sign Up</h2>
+          <form onsubmit="return validateSignup()">
+              <label for="signupUsername">Username</label>
+              <input type="text" id="signupUsername" required>
+              <label for="signupEmail">Email</label>
+              <input type="email" id="signupEmail" required>
+              <label for="signupPassword">Password</label>
+              <input type="password" id="signupPassword" required>
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" id="confirmPassword" required>
+              <button type="submit">Sign Up</button>
+              <p id="signupErrorMessage" class="error-message"></p>
+          </form>
+      </div>
+  </div>
+  <!-- Main Content Sections (Hero, About, Products, etc.) -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h2>Welcome to our Furniture Store</h2>
+        <p>Find quality furniture for your home</p>
+        <button onclick="shopNow()">Shop Now</button>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        <!-- Product Card for Sofa -->
+        <div class="product-card">
+          <img src="images/Furniture_Image1.jpg" alt="Sofa" />
+          <h3>Sofa</h3>
+          <p>$500</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card for Chair -->
+        <div class="product-card">
+          <img src="images/Furniture_Image4.jpg" alt="Chair" />
+          <h3>Stylish Chair</h3>
+          <p>$150</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/Furniture_Image13.jpg" alt="Chair" />
+          <h3>Glass Cupboard</h3>
+          <p>$350</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card for Table -->
+        <div class="product-card">
+          <img src="images/Furniture_Image5.jpg" alt="Table" />
+          <h3>Modern Table</h3>
+          <p>$100</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <!-- Add more product cards as needed -->
+      </div>
+    </section>
+    <section id="products" class="products">
+      <div class="product-grid">
+        <!-- Product Card for Sofa -->
+        <div class="product-card">
+          <img src="images/Furniture_Image7.jpg" alt="Sofa" />
+          <h3>Modern king chair</h3>
+          <p>$350</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card for Chair -->
+        <div class="product-card">
+          <img src="images/Furniture_Image10.jpg" alt="Chair" />
+          <h3>Master Bedroom</h3>
+          <p>$1100</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/Furniture_Image11.jpg" alt="Chair" />
+          <h3>Corner rack</h3>
+          <p>$150</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card for Table -->
+        <div class="product-card">
+          <img src="images/Furniture_Image8.jpg" alt="Table" />
+          <h3>Trendy Bed</h3>
+          <p>$2000</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <!-- Add more product cards as needed -->
+      </div>
+    </section>
+    <section id="products" class="products">
+      <div class="product-grid">
+        <!-- Product Card for Sofa -->
+        <div class="product-card">
+          <img src="images/Furniture_Image3.jpg" alt="Sofa" />
+          <h3>Comfortable Sofa</h3>
+          <p>$500</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card for Chair -->
+        <div class="product-card">
+          <img src="images/Furniture_image9.jpg" alt="Chair" />
+          <h3>Dining Table</h3>
+          <p>$350</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/Furniture_Image12.jpg" alt="Chair" />
+          <h3>Kitchen Cupboard</h3>
+          <p>$200</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <!-- Product Card for Table -->
+        <div class="product-card">
+          <img src="images/Furniture_Image2.jpg" alt="Table" />
+          <h3>Modern Table</h3>
+          <p>$200</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <!-- Add more product cards as needed -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="contact"
+      style="background-color: antiquewhite"
+    >
+      <h2>Contact Us</h2>
+      <p>Email: info@furniturestore.com</p>
+      <p>Phone: +1 (123) 456-7890</p>
+      <p>Address: 123 Furniture St, Hometown, Country</p>
+    </section>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+<footer>
+  <div class="footer-container">
+      <!-- Footer Links -->
+      <div class="footer-section">
+          <h4>About Us</h4>
+          <p>Discover the finest furniture and home decor at our store. Bringing comfort and style to every home.</p>
+      </div>
+
+      <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"> <i class=' fa fa-facebook-square' style='font-size:20px'>facebook</i></a>
+            <a href="#"> <i class=' fa fa-twitter-square' style='font-size:20px'> Twitter</i></a>
+            <a href="#"> <i class=' fa fa-instagram' style='font-size:20px'>Instagram</i></a>
+            <a href="#"> <i class=' fa fa-linkedin-square' style='font-size:20px'> Linkedin</i></a>
+   
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Subscribe to receive updates on new arrivals and special offers.</p>
+          <form id="newsletterForm">
+              <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+          </form>
+          <p id="newsletterMessage" class="newsletter-message"></p>
+      </div>
+  </div>
+  <p class="footer-bottom-text">© 2024 Furniture Store. All rights reserved.</p>
+</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
